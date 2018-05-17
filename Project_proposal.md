@@ -123,11 +123,12 @@
 
 |   功能模块   |           技术和软件平台           |
 | :------: | :-------------------------: |
-|   操作系统   |          Windows10          |
+|   开发操作系统   |          Windows10          |
+|   运行操作系统   |          CentOS7            |
 | 设计稿、图形处理 |          Photoshop          |
 | 动画设计与制作  |            Flash            |
 |  网站开发语言  | HTML, CSS, Java, Javascript |
-|   开发平台   |   Intellij IDEA, eclipse    |
+|   开发平台   |   IntelliJ IDEA, eclipse    |
 |   开发框架   |         springboot          |
 |   数据库    |            MySQL            |
 
