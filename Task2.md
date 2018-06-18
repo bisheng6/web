@@ -94,20 +94,20 @@
 
 1、首页页面布局
 
-![首页布局](.\页面布局\首页布局.png)
+![首页布局](https://raw.githubusercontent.com/bisheng6/web/master/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/%E9%A6%96%E9%A1%B5%E5%B8%83%E5%B1%80.png)
 
 2、分页页面布局
 ​	（1）子功能一：文本生成二维码
 
-![文本功能](.\页面布局\文本功能.png)
+![文本功能](https://raw.githubusercontent.com/bisheng6/web/master/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/%E6%96%87%E6%9C%AC%E5%8A%9F%E8%83%BD.png)
 
 ​	（2）子功能二：名片生成二维码
 
-![名片功能](.\页面布局\名片功能.png)
+![名片功能](https://raw.githubusercontent.com/bisheng6/web/master/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/%E5%90%8D%E7%89%87%E5%8A%9F%E8%83%BD.png)
 
 ​	（3）子功能三：文件/图片生成二维码
 
-![链接功能](.\页面布局\链接功能.png)
+![链接功能](https://raw.githubusercontent.com/bisheng6/web/master/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/%E9%93%BE%E6%8E%A5%E5%8A%9F%E8%83%BD.png)
 
 ## 执行概要
 
