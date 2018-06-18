@@ -4,6 +4,11 @@
 
 ![应用框架图](https://raw.githubusercontent.com/bisheng6/web/40b303e543cc2ba8a1f40350c4a95f268b392c8f/web%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84.jpg)
 
+MVC模型：
+
+![MVC](https://github.com/bisheng6/web/blob/master/MVC.png?raw=true)
+
+
 
 Domian Object（领域对象）层：此层由一系列普通、传统的Java对象组成，每个对象包含各自业务逻辑方法。
 
@@ -17,6 +22,6 @@ View层：收集用户请求，并显示处理结果。
 
 Database层：实现数据的持久化
 
- 
+
 各组件之间一个松耦合的方式耦合在一起
 
