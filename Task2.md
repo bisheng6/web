@@ -88,7 +88,7 @@
 
 （一）网站内容
 
-![网站内容](.\页面布局\网站内容.png)
+![网站内容](https://raw.githubusercontent.com/bisheng6/web/master/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/%E7%BD%91%E7%AB%99%E5%86%85%E5%AE%B9.png)
 
 （二）页面布局
 
