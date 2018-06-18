@@ -88,26 +88,26 @@
 
 （一）网站内容
 
-![网站内容](https://github.com/bisheng6/web/blob/master/网站内容.png)
+![网站内容](.\页面布局\网站内容.png)
 
 （二）页面布局
 
 1、首页页面布局
 
-![首页布局](https://github.com/bisheng6/web/blob/master/首页布局.png)
+![首页布局](.\页面布局\首页布局.png)
 
 2、分页页面布局
 ​	（1）子功能一：文本生成二维码
 
-![文本功能](https://github.com/bisheng6/web/blob/master/文本功能.png)
+![文本功能](.\页面布局\文本功能.png)
 
 ​	（2）子功能二：名片生成二维码
 
-![名片功能](https://github.com/bisheng6/web/blob/master/名片功能.png)
+![名片功能](.\页面布局\名片功能.png)
 
-​	（3）子功能三：文件/图片生成二维码a
+​	（3）子功能三：文件/图片生成二维码
 
-![链接功能](https://github.com/bisheng6/web/blob/master/链接功能.png)
+![链接功能](.\页面布局\链接功能.png)
 
 ## 执行概要
 
