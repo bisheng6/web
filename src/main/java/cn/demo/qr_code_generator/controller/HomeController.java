@@ -1,5 +1,8 @@
 package cn.demo.qr_code_generator.controller;
 
+import cn.demo.qr_code_generator.bean.User;
+import cn.demo.qr_code_generator.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,17 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController
 {
-    @RequestMapping(value = {"/", "/index"}, method = {RequestMethod.GET, RequestMethod.POST})
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping(value = {"/", "/login"}, method = {RequestMethod.GET, RequestMethod.POST})
     public String login()
     {
         if (!SecurityContextHolder.getContext().getAuthentication().getName().equals("anonymousUser"))
-            return "home";
-        return "index";
+            return "main";
+        return "login";
     }
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String home()
     {
-        return "home";
+        return "main";
+    }
+
+    @RequestMapping(value = "/main", method = RequestMethod.POST)
+    public String register(User user)
+    {
+        userService.register(user);
+        return null;
     }
 }

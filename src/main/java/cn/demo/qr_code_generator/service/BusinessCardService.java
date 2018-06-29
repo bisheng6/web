@@ -15,4 +15,10 @@ public class BusinessCardService
     {
         return businessCardDAO.getOne(id);
     }
+
+    // TODO: 2018/6/29 设置服务端mysql数据库
+    public void save(BusinessCard businessCard)
+    {
+        businessCardDAO.save(businessCard);
+    }
 }

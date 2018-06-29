@@ -8,6 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import java.util.ArrayList;
+
 public class CustomUserService implements UserDetailsService
 {
     @Autowired
@@ -16,7 +18,9 @@ public class CustomUserService implements UserDetailsService
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException
     {
-        User user = userDAO.getOne(s);
-        return new SecurityUser(user.getUsername(), user.getPassword(), null);
+        User user = userDAO.findById(s).get();
+        if (user.getUsername() == null)
+            throw new UsernameNotFoundException("用户名不存在");
+        return new SecurityUser(user.getUsername(), user.getPassword(), new ArrayList<>());
     }
 }

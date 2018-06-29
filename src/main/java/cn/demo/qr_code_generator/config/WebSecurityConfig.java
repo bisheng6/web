@@ -42,15 +42,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception
     {
         http.authorizeRequests()
+                .antMatchers("/login/**").permitAll()
                 .antMatchers("/index").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .usernameParameter("Username")
-                .passwordParameter("Password")
-                .loginPage("/index")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .loginPage("/login")
                 .defaultSuccessUrl("/main")
-                .failureUrl("/index?error").permitAll()
+                .failureUrl("/login?error").permitAll()
                 .and()
                 .csrf().disable();
     }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <script type = "application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <meta name = "keywords" content = "">
+    <link href = "login/css/style.css" rel = 'stylesheet' type = 'text/css'/>
+    <script src = "login/js/jquery.min.js"></script>
+</head>
+<body>
+<script>$(document).ready(function (c) {
+    $('.close').on('click', function (c) {
+        $('.login-form').fadeOut('slow', function (c) {
+            $('.login-form').remove();
+        });
+    });
+});
+</script>
+
+<div class = "login-form">
+    <div class = "close"></div>
+    <div class = "head-info">
+        <label class = "lbl-1"> </label>
+        <label class = "lbl-2"> </label>
+        <label class = "lbl-3"> </label>
+    </div>
+    <div class = "clear"></div>
+    <div class = "avtar">
+        <img src = "login/images/avtar.png"/>
+    </div>
+    <form action = "/login" method = "post">
+        <input type = "text" class = "text" placeholder = "Username" name = "username">
+        <div class = "key">
+            <input type = "password" placeholder = "Password" name = "password">
+        </div>
+        <div class = "signin">
+            <input type = "submit" value = "Login">
+        </div>
+    </form>
+    <!--<div class="signin">
+        <input type="submit" value="Login" onclick="window.open('main.html')">
+    </div>-->
+</div>
+</body>
+</html>

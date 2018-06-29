@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BusinessCardDAO extends JpaRepository<BusinessCard, Integer>
 {
-
+    BusinessCard findByNameAndCompany(String name, String company);
 }

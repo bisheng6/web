@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BusinessCardController
@@ -14,13 +15,20 @@ public class BusinessCardController
     @Autowired
     private BusinessCardService businessCardService;
 
-    @RequestMapping(value = "/businesscard", method = RequestMethod.GET)
+    @RequestMapping(value = "/businessCard", method = RequestMethod.GET)
     public String getBusinessCardById(Model model, int id)
     {
         System.out.println(id);
         BusinessCard businessCard = businessCardService.getBusinessCard(id);
         model.addAttribute(businessCard);
-        // TODO: 2018/6/18 返回到一个页面
-        return null;
+        return "card";
+    }
+
+    @RequestMapping(value = "/businessCard", method = RequestMethod.POST)
+    @ResponseBody
+    public Integer saveBusinessCard(BusinessCard businessCard)
+    {
+        businessCardService.save(businessCard);
+        return businessCard.getId();
     }
 }

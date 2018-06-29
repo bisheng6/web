@@ -12,7 +12,9 @@ public class MD5Util
 
     public static String encode(String str)
     {
-        MessageDigest md5;
+        return str;
+        // TODO: 2018/6/29 注册功能写好后解除注释
+        /*MessageDigest md5;
         try
         {
             md5 = MessageDigest.getInstance("MD5");
@@ -35,6 +37,6 @@ public class MD5Util
                 hexValue.append("0");
             hexValue.append(Integer.toHexString(val));
         }
-        return hexValue.toString();
+        return hexValue.toString();*/
     }
 }
