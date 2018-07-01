@@ -32,6 +32,6 @@ public class HomeController
     public String register(User user)
     {
         userService.register(user);
-        return "main";
+        return "login";
     }
 }
