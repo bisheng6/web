@@ -43,6 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     {
         http.authorizeRequests()
                 .antMatchers("/login/**", "/register/**", "/register.html").permitAll()
+                .antMatchers( "/mplayer.html", "/vplayer.html", "/file/**", "/video/**", "/music/**").permitAll()
                 .antMatchers("/register").permitAll()
                 .anyRequest().authenticated()
                 .and()
