@@ -114,3 +114,23 @@ input::-webkit-slider-thumb {
 	border-radius: 3px;
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #aaa) );
 }
+
+#qrinfo{
+	margin:0;
+	padding: 10px;
+	width: 400px;
+	height: 200px;
+	background: red;
+}
+
+#qrinfo textarea{
+	width: 90%;
+	height: 90px;
+}
+
+#qrinfo button{
+	width: 90%;
+	height: 20px;
+	border-radius: 15px;
+	background: green;
+}

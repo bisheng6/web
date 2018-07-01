@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>二维码 - WEB工程</title>
+	<script src="vbg/js/jquery-2.1.1.min.js"></script>
+	<script src="vbg/dist/vidbg.js"></script>
+	<!-- <script src="qr/jquery-1.10.2.js"></script> -->
+
+	<script src="qr/jquery.qrcode.js?v=121"></script>
+	<script src="qr/ff-range.js"></script>
+	<script src="qr/scripts.js"></script>
+
+	<script type="text/javascript" src="menu/js/interface.js"></script>
+	<script type="text/javascript" src="layer/layer.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="vbg/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="vbg/css/default.css">
+	<link rel="stylesheet" type="text/css" href="vbg/css/fullscreenDemo.css">
+
+	<link rel='stylesheet' type="text/css" href='qr/styles.css'>
+
+	<link href="menu/style.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+	<div class="dock" id="dock" style="margin-bottom: 50px;">
+		<div class="dock-container">
+		<a class="dock-item" href="javascript:void(0);">
+			<img src="menu/images/home.png" alt="home"><span>个人中心</span></a> 
+		<a class="dock-item" href="cardInfo.html">
+			<img src="menu/images/email.png" alt="contact""><span>名片</span></a> 
+		<a class="dock-item" href="upload.html?type=1">
+			<img src="menu/images/portfolio.png" alt="portfolio"><span>文件</span></a> 
+		<a class="dock-item" href="upload.html?type=2">
+			<img src="menu/images/music.png" alt="music"><span>音乐</span></a> 
+		<a class="dock-item" href="upload.html?type=3">
+			<img src="menu/images/video.png" alt="video"><span>视频</span></a> 
+		<a class="dock-item" href="javascript:void(0);" onclick="jilu();">
+			<img src="menu/images/history.png" alt="history"><span>记录</span></a>
+		</div>
+	</div>
+
+	<div id="container"></div>
+
+	<div class="control left">
+		<a id="banner" target="blank" href="https://github.com/bisheng6/web">GitHub QRcode 1.0.0</a>
+		<hr/>
+		<label for="render">二维码类型</label>
+		<select id="render">
+			<option value="canvas" selected="selected">Canvas</option>
+			<option value="image">Image</option>
+			<option value="div">DIV</option>
+		</select>
+		<hr/>
+		<label for="size">尺寸</label>
+		<input id="size" type="range" value="500" min="100" max="1000" step="50" />
+		<label for="color">前景</label>
+		<input id="color" type="color" value="#333333" />
+		<label for="bg-color">背景</label>
+		<input id="bg-color" type="color" value="#ffffff" />
+		<label for="text">内容</label>
+		<textarea id="text">https://github.com/bisheng6/web</textarea>
+		<hr/>
+		<label for="minversion">最小</label>
+		<input id="minversion" type="range" value="6" min="1" max="10" step="1" />
+		<label for="eclevel">容错等级</label>
+		<select id="eclevel">
+			<option value="L">Low (7%)</option>
+			<option value="M">Medium (15%)</option>
+			<option value="Q">Quartile (25%)</option>
+			<option value="H" selected="selected">High (30%)</option>
+		</select>
+		<label for="quiet">边框</label>
+		<input id="quiet" type="range" value="1" min="0" max="4" step="1" />
+		<label for="radius">圆角弧度</label>
+		<input id="radius" type="range" value="50" min="0" max="50" step="10" />
+		<!-- <hr/> -->
+		<!-- <a id="download" download="qrcode.png">DOWNLOAD</a> -->
+	</div>
+
+	<div class="control right">
+		<label for="mode">标签类型</label>
+		<select id="mode">
+			<option value="0">0 - Normal</option>
+			<option value="1">1 - Label-Strip</option>
+			<option value="2" selected="selected">2 - Label-Box</option>
+			<option value="3">3 - Image-Strip</option>
+			<option value="4">4 - Image-Box</option>
+		</select>
+		<hr/>
+		<label for="label">标签内容</label>
+		<input id="label" type="text" value="阳湘源" />
+		<label for="fontsize">标签尺寸</label>
+		<input id="fontsize" type="range" value="11" min="1" max="20" step="1" />
+		<label for="font">标签字体</label>
+		<input id="font" type="text" value="Ubuntu" />
+		<label for="fontcolor">标签颜色</label>
+		<input id="fontcolor" type="color" value="#ff9818" />
+		<hr/>
+		<label for="image">上传图片</label>
+		<input id="image" type="file" />
+		<label for="imagesize">图片尺寸</label>
+		<input id="imagesize" type="range" value="13" min="1" max="30" step="1" />
+	</div>
+
+	<img id="img-buffer" src="qr/dummy.png">
+
+	<script type="text/javascript">
+		$(function(){
+			$(".control").hide();
+			//随机选择海报图
+			var num = Math.floor(Math.random() * 10 + 1);
+			var poster = 'vbg/media/'+num+'.jpg';
+			$('body').vidbg({
+		//		'mp4': 'vbg/media/123.mp4',
+				//  'webm': 'media/vbg.webm',
+				'poster': poster,
+			}, {
+				// Options
+				muted: true,
+				loop: true,
+				overlay: true,
+			});
+
+			$('#dock').Fisheye(
+				{
+					maxWidth: 50,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container',
+					itemWidth: 60,
+					proximity: 90,
+					halign : 'center'
+				}
+			);
+
+			
+			$(document).mousemove(function(e){
+				var width = $(window).width();
+				if(e.pageX < 200 || e.pageX > width - 200){
+					$(".control").show();
+				}else{
+					$(".control").hide();
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

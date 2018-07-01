@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns:th = "http://www.thymeleaf.org" xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <title>information</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <meta name = "description" content = "Free HTML5 Website Template by freehtml5.co"/>
+    <meta name = "keywords"
+          content = "free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive"/>
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property = "og:title" content = ""/>
+    <meta property = "og:image" content = ""/>
+    <meta property = "og:url" content = ""/>
+    <meta property = "og:site_name" content = ""/>
+    <meta property = "og:description" content = ""/>
+    <meta name = "twitter:title" content = ""/>
+    <meta name = "twitter:image" content = ""/>
+    <meta name = "twitter:url" content = ""/>
+    <meta name = "twitter:card" content = ""/>
+
+    <link href = "https://fonts.googleapis.com/css?family=Space+Mono" rel = "stylesheet">
+    <link href = "https://fonts.googleapis.com/css?family=Kaushan+Script" rel = "stylesheet">
+
+    <!-- Animate.css -->
+    <link rel = "stylesheet" href = "card/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel = "stylesheet" href = "card/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel = "stylesheet" href = "card/css/bootstrap.css">
+
+    <!-- Theme style  -->
+    <link rel = "stylesheet" href = "card/css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src = "card/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src = "card/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id = "fh5co-header" class = "fh5co-cover js-fullheight" role = "banner"
+      style = "background-image:url(card/images/cover_bg_3.jpg);" data-stellar-background-ratio = "0.5">
+
+<div class = "fh5co-loader"></div>
+
+<div id = "page">
+
+    <div class = "overlay"></div>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-8 col-md-offset-2 text-center">
+                <div class = "display-t js-fullheight">
+                    <div class = "display-tc js-fullheight animate-box" data-animate-effect = "fadeIn">
+                        <div class = "profile-thumb" style = "background: url(card/images/user-3.jpg);"></div>
+                        <h1><span th:text = "${businessCard.name}"/></h1>
+                        <h2><span th:text = "'Telephone: ' + ${businessCard.telephone}"/></h2>
+                        <h2><span th:text = "'Company: ' + ${businessCard.company}"/></h2>
+                        <h2><span th:text = "'Email: ' + ${businessCard.email}"/></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src = "card/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src = "card/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src = "card/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src = "card/js/jquery.waypoints.min.js"></script>
+<!-- Stellar Parallax -->
+<script src = "card/js/jquery.stellar.min.js"></script>
+<!-- Easy PieChart -->
+<script src = "card/js/jquery.easypiechart.min.js"></script>
+<!-- Google Map -->
+
+<script src = "card/js/google_map.js"></script>
+
+<!-- Main -->
+<script src = "card/js/main.js"></script>
+
+</body>
+</html>
+

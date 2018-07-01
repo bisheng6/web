@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>上传文件</title>
+
+<script src="js/jquery.min.js"></script>
+
+<style type="text/css">
+    html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: -webkit-linear-gradient(bottom, #4F6072, #8699AA);
+        background: linear-gradient(to top, #4F6072, #8699AA);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .upload-files {
+        position: relative;
+        width: 400px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding-bottom: 20px;
+        background: #fff;
+        -webkit-animation: fadeup .5s .5s ease both;
+        animation: fadeup .5s .5s ease both;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    .upload-files header {
+        background: #4db6ac;
+        text-align: center;
+    }
+    .upload-files header p {
+        color: #fff;
+        font-size: 40px;
+        margin: 0;
+        padding: 50px 0;
+    }
+    .upload-files header p i {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        opacity: 0;
+        font-size: 30px;
+        -webkit-animation: fadeup .5s 1s ease both;
+        animation: fadeup .5s 1s ease both;
+    }
+    .upload-files header p .up {
+        font-weight: bold;
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+        display: inline-block;
+        opacity: 0;
+        -webkit-animation: faderight .5s 1.5s ease both;
+        animation: faderight .5s 1.5s ease both;
+    }
+    .upload-files header p .load {
+        display: inline-block;
+        font-weight: 100;
+        margin-left: -8px;
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px);
+        opacity: 0;
+        -webkit-animation: faderight 1s 1.5s ease both;
+                animation: faderight 1s 1.5s ease both;
+    }
+    .upload-files .body {
+        text-align: center;
+        padding: 10px 0;
+        padding-bottom: 30px;
+    }
+
+    .upload-files .body #file-select{
+        color:#4db6ac;
+    }
+
+    .upload-files .importar {
+        display: block;
+        outline: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        border: solid 1px #4db6ac;
+        color: #4db6ac;
+        background: transparent;
+        padding: 8px 15px;
+        font-size: 12px;
+        border-radius: 4px;
+        font-family: Roboto;
+        line-height: 1;
+        cursor: pointer;
+        -webkit-transform: translateY(15px);
+                transform: translateY(15px);
+        opacity: 0.5;
+        margin-left: calc(50% - 40px);
+    }
+
+    .upload-files .importar:hover {
+        background: #4db6ac;
+        color: #fff;
+    }
+
+    @-webkit-keyframes fadeup {
+        to {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+    }
+    @keyframes fadeup {
+        to {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+    }
+    @-webkit-keyframes faderight {
+        to {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+    }
+    @keyframes faderight {
+        to {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+<div class="upload-files">
+    <header>
+        <p>
+        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+        <span class="up">up</span>
+        <span class="load">load</span>
+        </p>
+    </header>
+    <div class="body">
+        <form action="?" method="POST" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <input type="hidden" value="1" name="type">
+            <input type="file" id="file-select" name="file">
+            <input class="importar" type="submit" name="upload" value="上传文件">
+        </form>
+    </div>
+</div>
+</body>
+</html>

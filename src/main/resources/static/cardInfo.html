@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>录入名片信息</title>
+	<style type="text/css">
+		body{
+			background: #728495;
+		}
+
+		#card{
+			width:30%;
+			margin:150px auto;
+			background: #e6e6fa;
+			border-radius: 15px;
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			-o-border-radius: 15px;
+		}
+
+		#card input[type="text"] {
+			width: 80%;
+			padding: 1em 2em 1em 3em;
+			color: #9199aa;
+			font-size: 18px;
+			outline: none;
+			background: url('qr/adm.png') no-repeat 10px 15px;
+			border: none;
+			font-weight: 100;
+			border-bottom: 1px solid#484856;
+			margin-top: 2em;
+		}
+
+		#card input[type="submit"]{
+			font-size: 30px;
+			color: #fff;
+			outline: none;
+			border: none;
+			background: #3ea751;
+			width: 100%;
+			padding: 18px 0;
+			border-bottom-left-radius: 15px;
+			-webkit-border-bottom-left-radius: 15px;
+			-moz-border-bottom-left-radius: 15px;
+			-o-border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			-webkit-border-bottom-right-radius: 15px;
+			-moz-border-bottom-right-radius: 15px;
+			-o-border-bottom-right-radius: 15px;
+			cursor: pointer;
+		}
+
+		#card input[type="submit"]:hover {
+			background: #ff2775;
+			border-bottom-left-radius: 15px;
+			-webkit-border-bottom-left-radius: 15px;
+			-moz-border-bottom-left-radius: 15px;
+			-o-border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			-webkit-border-bottom-right-radius: 15px;
+			-moz-border-bottom-right-radius: 15px;
+			-o-border-bottom-right-radius: 15px;
+			transition: 1s all;
+			-webkit-transition: 1s all;
+			-moz-transition: 1s all;
+			-o-transition: 1s all;
+		}
+	</style>
+</head>
+<body>
+	<div id="card" action="?" method="POST">
+		<form>
+			<input type="text" name="name" placeholder="姓名" required="true">
+			<input type="text" name="telephone" placeholder="电话">
+			<input type="text" name="email" placeholder="邮件">
+			<input type="text" name="company" placeholder="公司">
+			<input type="submit" vale="确定">
+		</form>
+	</div>
+</body>
+</html>

@@ -97,29 +97,26 @@ var isOpera = Object.prototype.toString.call(window.opera) == '[object Opera]',
 		$("#download").attr("href", data);
 	};
 
-function mingpian(){
-	layer.msg("名片占坑");
-}
+	function jilu(){
+		layer.prompt({title: '请输入一些描述信息', formType: 2}, function(text, index){
+		    layer.close(index);
+		    ok(text);
+		});
+	}
 
-function wenjian(){
-	layer.msg("文件占坑");
-}
-
-function yinyue(){
-	$("#text").val("http://www.svortex.top/mplayer.html");
-	$("#label").val("扫我听音乐");
-	update();
-}
-
-function shipin(){
-	$("#text").val("http://www.svortex.top/vplayer.html");
-	$("#label").val("扫我看视频");
-	update();
-}
-
-function lishi(){
-	layer.msg("未发现操作历史");
-}
+	function ok(text){
+		var url = "xxx";
+		var content=$("#text").val();
+		var label=$("#label").val();
+		console.log(content+label+text);
+		$.post(url, {'content':content,'label':label,'text':text},function(res){
+			if(res="ok"){
+				layer.msg("成功保存");
+			}else{
+				layer.msg("系统错误");
+			}
+		});
+	}
 
 $(function () {
 
