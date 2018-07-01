@@ -2,33 +2,23 @@
 <html>
 <head>
 <title>登录</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- font files  -->
-<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-<!-- /font files  -->
-<!-- css files -->
-<link href="login/css/style.css" rel='stylesheet' type='text/css' media="all" />
-<!-- /css files -->
+<meta charset="utf-8">
+<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
 </head>
 <body>
-<h1>草料二维码</h1>
+<div id="login">
+	<h1>二维码</h1>
+</div>
 <div class="log">
 	<div class="content2">
-		<button  align="center"class="but2" onclick="window.location.href='register.html'">注册</button>
 		<h2>Sign In</h2>
-
 		<form>
 			<input  action="" type="text" name="userid" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
 			<input  action="" type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}">
 			<div class="button-row">
 				<input type="submit" class="sign-in" value="Sign In">
-				<input type="reset" class="reset" value="Reset">
+				<button class="reset" onclick="window.location.href='./register.html';return false;">注册</button>
 				<div class="clear"></div>
-
 			</div>
 		</form>
 	</div>
