@@ -14,7 +14,7 @@ body {
 	-o-background-size:cover;
 	font-family: 'Muli', sans-serif;
 }
-#login{
+#register{
     position: absolute;
     top: 150px;
     left:50%;
@@ -22,7 +22,7 @@ body {
     width: 300px;
     height: 300px;
 }
-#login h1{
+#register h1{
     color: #ffffff;
     text-shadow:0 0 10px;
     letter-spacing: 1px;
