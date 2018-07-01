@@ -4,6 +4,7 @@ import cn.demo.qr_code_generator.service.CustomUserService;
 import cn.demo.qr_code_generator.util.MD5Util;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -42,8 +43,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception
     {
         http.authorizeRequests()
+                .antMatchers("**").permitAll()
                 .antMatchers("/login/**", "/register/**", "/register.html").permitAll()
                 .antMatchers( "/mplayer.html", "/vplayer.html", "/file/**", "/video/**", "/music/**").permitAll()
+                .antMatchers("/card", "/card/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/businessCard").permitAll()
                 .antMatchers("/register").permitAll()
                 .anyRequest().authenticated()
                 .and()

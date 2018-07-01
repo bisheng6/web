@@ -15,7 +15,7 @@ public class BusinessCardController
     @Autowired
     private BusinessCardService businessCardService;
 
-    @RequestMapping(value = "/businessCard", method = RequestMethod.GET)
+    @RequestMapping(value = "/businesscard", method = RequestMethod.GET)
     public String getBusinessCardById(Model model, int id)
     {
         System.out.println(id);
@@ -24,7 +24,7 @@ public class BusinessCardController
         return "card";
     }
 
-    @RequestMapping(value = "/businessCard", method = RequestMethod.POST)
+    @RequestMapping(value = "/businesscard", method = RequestMethod.POST)
     @ResponseBody
     public Integer saveBusinessCard(BusinessCard businessCard)
     {
