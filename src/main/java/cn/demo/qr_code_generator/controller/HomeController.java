@@ -28,10 +28,10 @@ public class HomeController
         return "main";
     }
 
-    @RequestMapping(value = "/main", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(User user)
     {
         userService.register(user);
-        return null;
+        return "main";
     }
 }
