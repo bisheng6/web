@@ -28,6 +28,7 @@ public class QRCodeController
                        @RequestParam("label") String label,
                        @RequestParam("text") String info)
     {
+        // TODO: 2018/7/2 type
         return qrCodeService.save(url, label, info) ? "ok" : "error";
     }
 }
