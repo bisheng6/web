@@ -105,7 +105,7 @@ var isOpera = Object.prototype.toString.call(window.opera) == '[object Opera]',
 	}
 
 	function ok(text){
-		var url = "xxx";
+		var url = "/qrcode";
 		var content=$("#text").val();
 		var label=$("#label").val();
 		console.log(content+label+text);

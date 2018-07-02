@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BusinessCardController
@@ -18,17 +17,26 @@ public class BusinessCardController
     @RequestMapping(value = "/businesscard", method = RequestMethod.GET)
     public String getBusinessCardById(Model model, int id)
     {
-        System.out.println(id);
+//        System.out.println(id);
         BusinessCard businessCard = businessCardService.getBusinessCard(id);
         model.addAttribute(businessCard);
         return "card";
     }
 
     @RequestMapping(value = "/businesscard", method = RequestMethod.POST)
-    @ResponseBody
-    public Integer saveBusinessCard(BusinessCard businessCard)
+    public String saveBusinessCard(Model model, BusinessCard businessCard)
     {
         businessCardService.save(businessCard);
-        return businessCard.getId();
+        // TODO: 2018/7/2 部署服务器时修改
+        String url = "127.0.0.1:8080/businesscard?id=" + businessCard.getId();
+        model.addAttribute("url", url);
+        model.addAttribute("type", 4);
+        return "main";
+    }
+
+    @RequestMapping(value = "/cardInfo", method = RequestMethod.GET)
+    public String cardInfo()
+    {
+        return "cardInfo";
     }
 }

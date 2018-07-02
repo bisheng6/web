@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Set;
 
@@ -17,17 +16,18 @@ public class QRCodeController
     @Autowired
     private QRCodeService qrCodeService;
 
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String upload(@RequestParam("type") Integer type, @RequestParam("file") MultipartFile file,
-                         @RequestParam("label") String label, @RequestParam("info") String info)
-    {
-        return qrCodeService.upload(type, file, label, info);
-    }
-
-    @RequestMapping(value = "/qrCode", method = RequestMethod.GET)
+    @RequestMapping(value = "/qrcode", method = RequestMethod.GET)
     public String getQRCodes()
     {
         Set<QRCode> qrCodes = qrCodeService.getQRCodes();
         return null;
+    }
+
+    @RequestMapping(value = "/qrcode", method = RequestMethod.POST)
+    public String save(@RequestParam("content") String url,
+                       @RequestParam("label") String label,
+                       @RequestParam("text") String info)
+    {
+        return qrCodeService.save(url, label, info) ? "ok" : "error";
     }
 }

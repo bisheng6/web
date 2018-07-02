@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html xmlns:th = "http://www.thymeleaf.org" xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>音频播放器</title>
@@ -12,9 +12,7 @@
     <section class="demo">
         <div id="myAudio" style="margin:0 auto;">
 			<audio>
-				<source title="未知音乐" src="http://music.huoxing.com/upload/20121215/1355575227640_8200.mp3" />
-				<source title="未知音乐" src="http://stream18.qqmusic.qq.com/31005070.mp3" />
-				<source title="未知音乐" src="http://stream12.qqmusic.qq.com/30416842.mp3" />
+				<source title="未知音乐" th:src="${path}" />
 			</audio>
 		</div>
 		<script type="text/javascript" src="music/jquery-1.10.2.js"></script>

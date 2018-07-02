@@ -20,19 +20,27 @@ public class QRCodeService
     @Autowired
     private UserService userService;
 
-    public String upload(Integer type, MultipartFile file, String label, String info)
+    public boolean save(String url, String label, String info)
     {
-        QRCode qrCode = new QRCode();
-        qrCode.setDate(new Date());
-        qrCode.setType(type);
-        qrCode.setUrl(FileUtil.saveFile(file));
-        qrCode.setLabel(label);
-        qrCode.setInfo(info);
-        qrCode.setUser(userService.getUser());
-        Set<QRCode> qrCodes = qrCode.getUser().getQrCodes();
-        qrCodes.add(qrCode);
-        qrCodeDAO.saveAll(qrCodes);
-        return qrCode.getUrl();
+        try
+        {
+            QRCode qrCode = new QRCode();
+            qrCode.setDate(new Date());
+            qrCode.setType(0);
+            qrCode.setUrl(url);
+            qrCode.setLabel(label);
+            qrCode.setInfo(info);
+            qrCode.setUser(userService.getUser());
+            Set<QRCode> qrCodes = qrCode.getUser().getQrCodes();
+            qrCodes.add(qrCode);
+            qrCodeDAO.saveAll(qrCodes);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
     public Set<QRCode> getQRCodes()

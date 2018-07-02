@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="zh">
+<html xmlns:th = "http://www.thymeleaf.org" xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -22,7 +22,7 @@
 
 	<div class="js-video">
 		<video class="js-media" poster="file/sintel.jpg">
-			  <source src="file/sintel.mp4" type="video/mp4" />
+			  <source th:src="${path}" type="video/mp4" />
 			<p>你的浏览器不支持 HTML5 Video</p>
 		</video>
 		<i data-playPause class="playPause fa fa-play ui-icon"><span></span></i>
