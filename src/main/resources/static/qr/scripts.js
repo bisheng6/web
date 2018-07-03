@@ -108,8 +108,9 @@ var isOpera = Object.prototype.toString.call(window.opera) == '[object Opera]',
 		var url = "/qrcode";
 		var content=$("#text").val();
 		var label=$("#label").val();
+		var type=$("#type1").val();
 		console.log(content+label+text);
-		$.post(url, {'content':content,'label':label,'text':text},function(res){
+		$.post(url, {'content':content,'label':label,'text':text,'type':type},function(res){
 			if(res="ok"){
 				layer.msg("成功保存");
 			}else{
