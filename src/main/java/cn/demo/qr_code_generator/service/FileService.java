@@ -16,7 +16,7 @@ public class FileService
 
         // 根路径应该放到.class所在的文件夹
         String rootPath = "target/classes/static";
-        String filePath = "/upload/" + file.getOriginalFilename();
+        String filePath = "/upload/" + System.currentTimeMillis() + file.getOriginalFilename();
         FileUtil.saveFile(file, new File(rootPath, filePath));
         switch (type)
         {

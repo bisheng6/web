@@ -26,9 +26,9 @@ public class QRCodeController
     @RequestMapping(value = "/qrcode", method = RequestMethod.POST)
     public String save(@RequestParam("content") String url,
                        @RequestParam("label") String label,
-                       @RequestParam("text") String info)
+                       @RequestParam("text") String info,
+                       @RequestParam("type") Integer type)
     {
-        // TODO: 2018/7/2 type
-        return qrCodeService.save(url, label, info) ? "ok" : "error";
+        return qrCodeService.save(url, label, info, type) ? "ok" : "error";
     }
 }
