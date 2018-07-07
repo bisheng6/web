@@ -3,27 +3,28 @@ package cn.demo.qr_code_generator.controller;
 import cn.demo.qr_code_generator.bean.QRCode;
 import cn.demo.qr_code_generator.service.QRCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
+@Controller
 public class QRCodeController
 {
     @Autowired
     private QRCodeService qrCodeService;
 
     @RequestMapping(value = "/qrcode", method = RequestMethod.GET)
-    public String getQRCodes()
+    public String getQRCodes(Model model)
     {
         Set<QRCode> qrCodes = qrCodeService.getQRCodes();
-        return null;
+        model.addAttribute("qrCodes", qrCodes);
+        return "ucenter";
     }
 
     @RequestMapping(value = "/qrcode", method = RequestMethod.POST)
+    @ResponseBody
     public String save(@RequestParam("content") String url,
                        @RequestParam("label") String label,
                        @RequestParam("text") String info,
