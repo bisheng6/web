@@ -3,6 +3,7 @@ package cn.demo.qr_code_generator.controller;
 import cn.demo.qr_code_generator.bean.BusinessCard;
 import cn.demo.qr_code_generator.service.BusinessCardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,9 @@ public class BusinessCardController
 {
     @Autowired
     private BusinessCardService businessCardService;
+
+    @Value("${server.name}")
+    private String serverName;
 
     @RequestMapping(value = "/businesscard", method = RequestMethod.GET)
     public String getBusinessCardById(Model model, int id)
@@ -27,8 +31,7 @@ public class BusinessCardController
     public String saveBusinessCard(Model model, BusinessCard businessCard)
     {
         businessCardService.save(businessCard);
-        // TODO: 2018/7/2 部署服务器时修改
-        String url = "127.0.0.1:8080/businesscard?id=" + businessCard.getId();
+        String url = serverName + "/businesscard?id=" + businessCard.getId();
         model.addAttribute("url", url);
         model.addAttribute("type", 4);
         return "main";

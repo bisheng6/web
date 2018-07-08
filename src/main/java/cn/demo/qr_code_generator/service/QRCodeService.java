@@ -20,13 +20,13 @@ public class QRCodeService
     @Autowired
     private UserService userService;
 
-    public boolean save(String url, String label, String info)
+    public boolean save(String url, String label, String info, Integer type)
     {
         try
         {
             QRCode qrCode = new QRCode();
             qrCode.setDate(new Date());
-            qrCode.setType(0);
+            qrCode.setType(type);
             qrCode.setUrl(url);
             qrCode.setLabel(label);
             qrCode.setInfo(info);

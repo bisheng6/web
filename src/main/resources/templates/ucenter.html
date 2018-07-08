@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org" xmlns:sec = "http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>管理员页面</title>
+    <link href = "assets/css/bootstrap.css" rel = "stylesheet">
+    <link href = "assets/css/font-awesome.css" rel = "stylesheet">
+    <link href = "assets/css/custom-styles.css" rel = "stylesheet">
+    <link href = "assets/js/dataTables/dataTables.bootstrap.css" rel = "stylesheet">
+    <script src = "assets/js/jquery-1.10.2.js"></script>
+    <script src = "assets/js/bootstrap.min.js"></script>
+    <script src = "assets/js/jquery.metisMenu.js"></script>
+    <script src = "assets/js/dataTables/jquery.dataTables.js?v=1"></script>
+    <script src = "assets/js/dataTables/dataTables.bootstrap.js?v=1"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables1').dataTable();
+        });
+    </script>
+</head>
+<body>
+<div id = "wrapper">
+    <nav class = "navbar navbar-default top-navbar" role = "navigation">
+
+        <ul class = "nav navbar-top-links navbar-right">
+            <li class = "dropdown">
+                <a class = "dropdown-toggle" data-toggle = "dropdown" href = "#" aria-expanded = "false">
+                    <i class = "fa fa-user fa-fw"></i> <i class = "fa fa-caret-down"></i>
+                </a>
+                <ul class = "dropdown-menu dropdown-user">
+                    <li>
+                        <a href = "logout"><i class = "fa fa-sign-out fa-fw"></i>退出登录</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id = "page-wrapper">
+
+        <div class = "row">
+            <div class = "col-md-12">
+                <div class = "panel panel-default">
+                    <div class = "panel-heading">
+                        二维码信息记录
+                    </div>
+                    <div class = "panel-body">
+                        <div class = "table-responsive">
+                            <table class = "table table-striped table-bordered table-hover" id = "dataTables1">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>类型</th>
+                                    <th>内容</th>
+                                    <th>标签</th>
+                                    <th>备注</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class = "even gradeC" th:each = "qrcode: ${qrCodes}" th:if = "${qrcode.type eq 1}">
+                                    <td th:text = "${qrcode.id}"></td>
+                                    <td th:text = "${qrcode.type}"></td>
+                                    <td th:text = "${qrcode.url}"></td>
+                                    <td th:text = "${qrcode.label}"></td>
+                                    <td th:text = "${qrcode.info}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
