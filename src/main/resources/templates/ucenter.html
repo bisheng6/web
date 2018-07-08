@@ -43,7 +43,7 @@
             <div class = "col-md-12">
                 <div class = "panel panel-default">
                     <div class = "panel-heading">
-                        申请信息
+                        二维码信息记录
                     </div>
                     <div class = "panel-body">
                         <div class = "table-responsive">
@@ -51,11 +51,10 @@
                                 <thead>
                                 <tr>
                                     <th>编号</th>
-                                    <th>工具</th>
-                                    <th>员工</th>
-                                    <th>申请时间</th>
-                                    <th>取走时间</th>
-                                    <th>归还时间</th>
+                                    <th>类型</th>
+                                    <th>内容</th>
+                                    <th>标签</th>
+                                    <th>备注</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -65,7 +64,6 @@
                                     <td th:text = "${qrcode.url}"></td>
                                     <td th:text = "${qrcode.label}"></td>
                                     <td th:text = "${qrcode.info}"></td>
-                                    <td>bcc</td>
                                 </tr>
                                 </tbody>
                             </table>
