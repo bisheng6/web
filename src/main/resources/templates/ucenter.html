@@ -58,7 +58,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class = "even gradeC" th:each = "qrcode: ${qrCodes}" th:if = "${qrcode.type eq 1}">
+                                <tr class = "even gradeC" th:each = "qrcode: ${qrCodes}">
                                     <td th:text = "${qrcode.id}"></td>
                                     <td th:text = "${qrcode.type}"></td>
                                     <td th:text = "${qrcode.url}"></td>

@@ -46,7 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 //                .antMatchers("**").permitAll()
                 .antMatchers("/login/**", "/register/**", "/register.html").permitAll()
 //                .antMatchers( "/mplayer.html", "/vplayer.html", "/file/**", "/video/**", "/music/**").permitAll()
-                .antMatchers("/card", "/card/**").permitAll()
+                .antMatchers("/businesscard", "/card", "/card/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/businessCard").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/upload/**").permitAll()
