@@ -17,7 +17,7 @@ public class FileService
     {
         String url = null;
 
-        String rootPath = "static";
+        String rootPath = "target/classes/static";
         String filePath = "/upload/" + System.currentTimeMillis() + file.getOriginalFilename();
         FileUtil.saveFile(file, new File(rootPath, filePath));
         switch (type)
