@@ -6,7 +6,7 @@
 
 在单元测试中主要对服务层和持久层进行测试，能否将数据正确放入数据库以及从数据库中获取精确的数据。
 
-测试代码位于项目：https://github.com/bisheng6/web/tree/master/src/main
+测试代码位于项目：https://github.com/bisheng6/web/tree/master/src/test/java/cn/demo/qr_code_generator
 
 #### 测试结果：
 
