@@ -34,14 +34,19 @@ public class WebDriverDemo {
 	}
  
 	@Test
-	public void testLogin() throws Exception {
+	public void test() throws Exception {
 		driver.get(baseUrl);
 		driver.findElement(By.name("username")).clear();// 按id找到元素后，清空该元素
 		driver.findElement(By.name("username")).sendKeys("halomoto");// 输入selenium
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("allisfine");
 		driver.findElement(By.className("sign-in")).click(); //点击搜索按钮
-		driver.get("http://www.svortex.top/qrcode");
+		driver.get("http://www.svortex.top/cardInfo");
+		driver.findElement(By.name("name")).clear();
+		driver.findElement(By.name("name")).sendKeys("chunjieshen");
+		driver.findElement(By.name("company")).sendKeys("xidian");
+		driver.findElement(By.name("email")).sendKeys("123@163.com");
+		driver.findElement(By.name("telephone")).sendKeys("123");
 	}
  
 	@After

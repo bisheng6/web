@@ -116,15 +116,28 @@ PS：以下二维码均可以直接扫码查看（微信既可）。
 
 ## 安全性测试
 
-#### SQL注入测试1：
+#### SQL注入测试：
+
+**测试环境：**
+
+1. 网址：http://www.svortex.top/login
+2. 已经存在注册用户：username:  1  ;password:  1
+
+**测试用例**：
 
 uername 输入:1'#
 
 password输入:1234(任意)
 
-实际实行 SELECT * FROM USER WHERE username = '1'#.........
+如果没有防止SQL注入：执行 SELECT * FROM USER WHERE username = '1'#.........
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%AE%89%E5%85%A8%E6%80%A7%E6%B5%8B%E8%AF%95/%E7%99%BB%E9%99%86.png)
 
 #### 测试结果：
+
+登陆失败
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%AE%89%E5%85%A8%E6%80%A7%E6%B5%8B%E8%AF%95/%E7%99%BB%E9%99%86%E5%A4%B1%E8%B4%A5.png)
 
 ## WebUI测试
 
