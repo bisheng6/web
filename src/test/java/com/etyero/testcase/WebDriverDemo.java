@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import cn.demo.qr_code_generator.QrCodeGeneratorApplication;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,10 +37,11 @@ public class WebDriverDemo {
 	public void testLogin() throws Exception {
 		driver.get(baseUrl);
 		driver.findElement(By.name("username")).clear();// 按id找到元素后，清空该元素
-		driver.findElement(By.name("username")).sendKeys("halomoto1");// 输入selenium
+		driver.findElement(By.name("username")).sendKeys("halomoto");// 输入selenium
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("allisfine");
 		driver.findElement(By.className("sign-in")).click(); //点击搜索按钮
+		driver.get("http://www.svortex.top/qrcode");
 	}
  
 	@After
