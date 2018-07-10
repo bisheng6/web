@@ -2,23 +2,91 @@
 
 ## 单元测试
 
-
+#### Junit单元测试
 
 
 
 ## 功能测试
 
+PS：以下二维码均可以直接扫码查看（微信既可）。
 
+#### 登陆注册
 
+登陆：（账号名：1，密码：1）
 
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E7%99%BB%E9%99%86.GIF)
+
+登陆成功：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E7%99%BB%E9%99%86%E6%88%90%E5%8A%9F.GIF)
+
+#### 名片二维码
+
+名片信息：
+
+![](![åçä¿¡æ¯.GIF](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E5%90%8D%E7%89%87%E4%BF%A1%E6%81%AF.GIF?raw=true) )
+
+名片二维码：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E5%90%8D%E7%89%87%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
+扫码结果（微信直接扫）：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E5%90%8D%E7%89%87.png)
+
+#### 视频二维码
+
+上传视频：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6.GIF)
+
+视频二维码：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E8%A7%86%E9%A2%91%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
+扫码播放(微信既可)：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E8%A7%86%E9%A2%91.png)
+
+#### 文本二维码
+
+文本信息：
+
+测试
+
+文本二维码：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E6%96%87%E6%9C%AC%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
+扫码查看文本：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E6%96%87%E6%9C%AC.png)
+
+#### 音频二维码
+
+上传音频文件：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E4%B8%8A%E4%BC%A0%E9%9F%B3%E4%B9%90.GIF)
+
+音频二维码：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E9%9F%B3%E9%A2%91%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
+扫码：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/%E6%89%AB%E7%A0%81%E9%9F%B3%E9%A2%91.png)
 
 ## 性能测试
 
+#### 安全性测试工具：LoadRunner
 
+测试步骤：
 
+1. LoadRunner Virtual User Generator录制测试脚本。
+2. LoadRunner Controller生成测试场景，使用虚拟用户进行测试，并收集测试得到的数据。
+3. LoadRunner Anylysis对测试数据进行分析。
 
-
-## 安全性测试
+#### 测试结果：
 
 #### 分析总结
 
@@ -44,5 +112,20 @@
 
 ![事务平均响应时间](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/Report4.png)
 
+
+
+## 安全性测试
+
+#### SQL注入测试1：
+
+uername 输入:1'#
+
+password输入:1234(任意)
+
+实际实行 SELECT * FROM USER WHERE username = '1'#.........
+
+#### 测试结果：
+
 ## WebUI测试
 
+selenium+Junit 对WebUI进行测试
