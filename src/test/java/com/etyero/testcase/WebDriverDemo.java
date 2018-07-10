@@ -41,6 +41,8 @@ public class WebDriverDemo {
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("allisfine");
 		driver.findElement(By.className("sign-in")).click(); //点击搜索按钮
+
+		//名片测试
 		driver.get("http://www.svortex.top/cardInfo");
 		driver.findElement(By.name("name")).clear();
 		driver.findElement(By.name("name")).sendKeys("chunjieshen");

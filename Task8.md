@@ -141,4 +141,11 @@ password输入:1234(任意)
 
 ## WebUI测试
 
-selenium+Junit 对WebUI进行测试
+**selenium+Junit 对WebUI进行测试**
+
+测试代码：https://github.com/bisheng6/web/blob/master/src/test/java/com/etyero/testcase/WebDriverDemo.java
+
+#### 测试结果：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/WebUI%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.GIF)
+
