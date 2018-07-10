@@ -2,7 +2,21 @@
 
 ## 单元测试
 
-#### Junit单元测试
+#### **单元测试使用JUnit**
+
+在单元测试中主要对服务层和持久层进行测试，能否将数据正确放入数据库以及从数据库中获取精确的数据。
+
+测试代码位于项目：https://github.com/bisheng6/web/tree/master/src/main
+
+#### 测试结果：
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/QRCodeDaoTest1.JPG)
+
+![https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/QRCodeDaoTest2.JPG]()![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/UerServiceTest.JPG)
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/UerServiceTest2.JPG)
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/%E6%8D%95%E8%8E%B7.JPG)
 
 
 
