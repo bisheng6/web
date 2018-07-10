@@ -12,7 +12,9 @@
 
 ![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/QRCodeDaoTest1.JPG)
 
-![https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/QRCodeDaoTest2.JPG]()![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/UerServiceTest.JPG)
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/QRCodeDaoTest2.JPG)
+
+![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/UerServiceTest.JPG)
 
 ![](https://github.com/bisheng6/web/blob/master/%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/UerServiceTest2.JPG)
 
