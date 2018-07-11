@@ -17,18 +17,18 @@
         $(document).ready(function () {
             $('#dataTables1').dataTable({
                 //列
-                columns:[
+            /*    columns:[
                     {data:"id"},
                     {data:"type"},
                     {data:"content"},
                     {data:"label"},
                     {data:"info"}
-                ],
+                ],*/
                 //渲染列
                 columnDefs:[
                     {
                         targets:[1],
-                        data:"type",
+                      //  data:"type",
                         render:function(data, type, row){
                             switch(data){
                                 case "1":return "文件二维码";
